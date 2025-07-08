@@ -1,8 +1,18 @@
 # NLW Agents
 
-Projeto desenvolvido durante o evento NLW da Rocketseat.
+Projeto desenvolvido durante um evento da **Rocketseat** utilizando tecnologias modernas para criação de uma API robusta e eficiente.
 
-## 🏛️ Arquitetura
+## 🚀 Tecnologias
+
+- **Node.js** com TypeScript nativo (experimental strip types)
+- **Fastify** - Framework web rápido e eficiente
+- **PostgreSQL** com extensão **pgvector** para vetores
+- **Drizzle ORM** - Type-safe database operations
+- **Zod** - Schema validation
+- **Docker** - Containerização do banco de dados
+- **Biome** - Linting e formatação de código
+
+## 🏗️ Arquitetura
 
 O projeto segue uma arquitetura modular com:
 
@@ -46,23 +56,45 @@ DATABASE_URL=postgresql://docker:docker@localhost:5432/agents
 npm install
 ```
 
-### 5. Execute as migrations
+### 5. Execute as migrações do banco
 
 ```bash
 npx drizzle-kit migrate
 ```
 
-### 6. Inicie o servidor
+### 6. (Opcional) Popule o banco com dados de exemplo
+
+```bash
+npm run db:seed
+```
+
+### 7. Execute o projeto
+
+**Desenvolvimento:**
 
 ```bash
 npm run dev
 ```
 
-## 🛠️ Tecnologias
+**Produção:**
 
-- `fastify`: Framework web
-- `drizzle-orm`: ORM para PostgreSQL
-- `zod`: Validação de schemas
-- `@fastify/cors`: Middleware CORS
-- `biome`: Linter e formatter
-- `typescript`: Superset JavaScript
+```bash
+npm start
+```
+
+## 📚 Scripts Disponíveis
+
+- `npm run dev` - Executa o servidor em modo de desenvolvimento com hot reload
+- `npm start` - Executa o servidor em modo de produção
+- `npm run db:seed` - Popula o banco de dados com dados de exemplo
+
+## 🌐 Endpoints
+
+A API estará disponível em `http://localhost:3333`
+
+- `GET /health` - Health check da aplicação
+- `GET /rooms` - Lista as salas disponíveis
+
+---
+
+Desenvolvido com ❤️ durante o NLW da Rocketseat
