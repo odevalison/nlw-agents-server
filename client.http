@@ -31,15 +31,15 @@ Content-Type: application/json
 
 # Get room questions
 # @name getRoomQuestions
-GET {{baseUrl}}/rooms/{{roomId}}/questions
+GET {{baseUrl}}/rooms/b3cc5213-6407-488a-b824-8cb8789304a4/questions
 
 ###
 
 # Create question
 # @name createQuestion
-POST {{baseUrl}}/rooms/{{roomId}}/questions
+POST {{baseUrl}}/rooms/b3cc5213-6407-488a-b824-8cb8789304a4/questions
 Content-Type: application/json
 
 {
-  "question": "Qual a diferenca do conceito de X para o de Y?"
+  "question": "O que é Node.js e qual a sua diferenca quando comparado ao React.js?"
 }
